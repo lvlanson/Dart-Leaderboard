@@ -9,3 +9,17 @@ body{
   background-color: #e0ebfc;
   font-family: 'Source Sans Pro';
 }
+h1{
+  text-align: center;
+  font-size: 55px;
+}
+a{
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+nav{
+  display: flex;
+  justify-content: center;
+}

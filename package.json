@@ -1,0 +1,22 @@
+{
+  "name": "dart_leaderboard",
+  "version": "0.0.1",
+  "description": "Dart Leaderboard - Saving all scores and presenting data on history",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvlanson/Dart-Leaderboard.git"
+  },
+  "author": "Thomas Davies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvlanson/Dart-Leaderboard/issues"
+  },
+  "homepage": "https://github.com/lvlanson/Dart-Leaderboard#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

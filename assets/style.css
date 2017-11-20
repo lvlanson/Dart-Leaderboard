@@ -22,4 +22,23 @@ a{
 nav{
   display: flex;
   justify-content: center;
+  height: 50px;
+}
+table{
+  font-size: 20px;
+  width: 100%;
+
+}
+tr{
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+a{
+  cursor: pointer;
+}
+.content{
+  margin: 40px 50px;
+}
+.highlighted{
+  background-color: #ffd1d1;
 }

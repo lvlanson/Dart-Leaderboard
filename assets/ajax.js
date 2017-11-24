@@ -7,5 +7,16 @@ $(document).ready(function(){
       }
     });
   });
-
+  $('.content').on('submit','form', function(event){
+    event.preventDefault();
+    var player = $(this).find('input').val();
+    var html = "<p>Spieler \"" + player +"\" wurde hinzugefügt!";
+    $.ajax($(this).attr('action'),{
+      type:'POST',
+      data: {"player": player},
+      complete: function(){
+        $(".content").find('.addPlayer').append(html);
+      }
+    });
+  });
 });

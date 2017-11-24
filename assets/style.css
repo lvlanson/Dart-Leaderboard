@@ -18,6 +18,19 @@ a{
   text-decoration: none;
   color: black;
   margin: 20px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+p, form, button{
+  font-size: 25px;
+}
+input{
+  line-height: 25px;
+  font-size: 25px;
 }
 nav{
   display: flex;
@@ -27,7 +40,6 @@ nav{
 table{
   font-size: 20px;
   width: 100%;
-
 }
 tr{
   background-color: #d3d3d3;

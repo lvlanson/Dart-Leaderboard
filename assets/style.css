@@ -41,9 +41,11 @@ table{
   font-size: 20px;
   width: 100%;
 }
-tr{
-  background-color: #d3d3d3;
+th{
   cursor: pointer;
+}
+tr{
+    background-color: #d3d3d3;
 }
 a{
   cursor: pointer;
@@ -53,4 +55,7 @@ a{
 }
 .highlighted{
   background-color: #ffd1d1;
+}
+.delete:hover{
+  color: red;
 }

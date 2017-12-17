@@ -3,3 +3,18 @@
   <input type="text" name="player">
   <button type="submit">Send</button>
 </form>
+<p>Spielerliste</p>
+<% if(typeof data !== undefined){%>
+  <table id="playerList">
+    <% for(var i=0; i<data.length; i++){%>
+      <tr>
+        <td class='playerName'>
+          <%= data[i].player %>
+        </td>
+        <td>
+          <a class='delete'>Löschen</a>
+        </td>
+      </tr>
+    <% } %>
+  </table>
+<% } %>

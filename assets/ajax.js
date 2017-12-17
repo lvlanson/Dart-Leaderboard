@@ -49,7 +49,7 @@ $(document).ready(function(){
     $.ajax({
       url: 'delete',
       type: 'POST',
-      data:{"name": name},
+      data:{'name': name},
       success: function(){
         console.log(name + " has been removed!");
         $('.content').find('#playerList').remove();

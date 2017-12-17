@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "app.js"
+},
   "name": "dart_leaderboard",
   "version": "0.0.1",
   "description": "Dart Leaderboard - Saving all scores and presenting data on history",

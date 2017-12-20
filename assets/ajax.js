@@ -37,7 +37,7 @@ $(document).ready(function(){
     }
 
   });
-/*
+
   $('.content').on('submit','.addPlayer', function(event){
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -65,7 +65,7 @@ $(document).ready(function(){
    * DELETE PLAYER FROM KONFIGURATION PAGE
    */
 
-/*
+
   $('.content').on('click', '.delete', function(){
     let name = $(this).closest('tr').find('.playerName').text().trim();
     console.log(name);
@@ -123,8 +123,5 @@ $(document).ready(function(){
         }
       });
     }
-
-
   });
-  */
 });

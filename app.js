@@ -47,12 +47,12 @@ app.post('/updateGamePage', function(req,res){
 
 app.post('/addPlayer', function(req,res){
   require('./controller/addPlayer.js').addPlayer(spielerLocation, fs, req, Player);
-  res.end(response);
+  res.json(response);
 });
 
 app.post('/delete', function(req,res){
   require('./controller/removePlayer.js').removePlayer(spielerLocation, fs, req);
-  res.end(response);
+  res.json(response);
 });
 
 app.post('/passwort', function(req,res){

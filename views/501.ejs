@@ -1,8 +1,18 @@
-<table>
-  <tr>
-    <th>Spieler</th>
-    <th>Wins</th>
-    <th>Losses</th>
-    <th>Punkte</th>
-  </tr>
-</table>
+<div class="injectedPage">
+  <table>
+    <tr>
+      <th>Spieler</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Punkte</th>
+    </tr>
+    <% for(var i=0; i<data.length; i++){%>
+      <tr id="player<%=i%>">
+        <td><%=data[i].player%></td>
+        <td><%=data[i].five01Wins%></td>
+        <td><%=data[i].five01Losses%></td>
+        <td><%=data[i].five01Score%></td>
+      </tr>
+    <%}%>
+  </table>
+</div>

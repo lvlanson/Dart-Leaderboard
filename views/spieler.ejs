@@ -1,9 +1,26 @@
-<table>
-  <tr>
-    <th>Spieler</th>
-    <th>Wins</th>
-    <th>Losses</th>
-    <th>Winrate</th>
-    <th>Cricket-Score</th>
-  </tr>
-</table>
+<div class="injectedPage">
+  <table>
+    <tr>
+      <th>Spieler</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Winrate</th>
+      <th>Cricket-Score</th>
+      <th>501-Score</th>
+    </tr>
+    <% for(var i=0; i<data.length; i++){%>
+      <tr id="player<%=i%>">
+        <td><%= data[i].player %></td>
+        <td><%= data[i].gamesTotal %></td>
+        <td><%= data[i].lossesTotal %></td>
+            <% if(data[i].gamesTotal === 0){%>
+            <td><%= 0 + '%' %></td>
+            <% }else{ %>
+            <td><%= data[i].winsTotal / data[i].gamesTotal * 100 + '%' %></td>
+            <% } %>
+        <td><%= data[i].cricketScore %></td>
+        <td><%= data[i].five01Score %></td>
+      </tr>
+    <%}%>
+  </table>
+</div>

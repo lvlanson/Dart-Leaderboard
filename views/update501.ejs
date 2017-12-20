@@ -1,0 +1,39 @@
+<div class="injectedPage">
+  <div class="updateGamePage">
+    <p>501</p>
+    <form action="sendUpdate" id="sendUpdate">
+      <table>
+        <tr>
+          <th>Spieler</th>
+          <th>Score</th>
+          <th>Rang</th>
+        </tr>
+        <%for(var i=0; i<names.length;i++){%>
+          <tr>
+            <td>
+              <%=names[i]%>
+            </td>
+            <td>
+              <input id="updateScore" name="updateScore" class="updateForm">
+            </td>
+            <td>
+              <select id="updateRang" name="updateRang" class='update'>
+              <%for(var j=0; j<names.length; j++){
+                if(i===j){%>
+                <option name="<%=j%>" id="rang<%=j%>" selected>
+                  <%=j+1%>
+                </option>
+                <%}else{%>
+                  <option name="<%=j%>" id="rang<%=j%>">
+                    <%=j+1%>
+                  </option>
+                <%}
+              }%>
+              </select>
+            </td>
+          </tr>
+        <%}%>
+      </table>
+    </form>
+  </div>
+</div>

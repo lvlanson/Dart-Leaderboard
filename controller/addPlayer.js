@@ -2,10 +2,9 @@ function isDuplicate(array, name){
   for(var i = 0; i<array.length; i++){
     if (array[i].player === name){
       return true;
-    }else{
-      return false;
     }
   }
+  return false;
 }
 
 exports.addPlayer = function(spielerLocation, fs, req, Player){

@@ -1,0 +1,24 @@
+<div class="injectedPage">
+  <p>Punkte Updaten</p>
+  <form id="updateForm">
+    <div class="updateSelection">
+      <% for(var i=0; i<data.length; i++){%>
+        <input type="checkbox" name="player" class="playerSelection">
+          <option value="<%=data[i].player%>" class="playerSelectionOption">
+            <%=data[i].player%>
+          </option></br>
+
+      <%}%>
+    </div>
+    <div class="updateSelection">
+      <input type="radio" name="game" class="gameSelection">
+        <option>
+          Cricket
+        </option> </br>
+      <input type="radio" name="game" class="gameSelection">
+        <option>
+          501
+        </option></br>
+    </div>
+  </form>
+</div>

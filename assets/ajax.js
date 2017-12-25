@@ -124,4 +124,47 @@ $(document).ready(function(){
       });
     }
   });
+
+  $('.content').on('submit', '#sendUpdate', function(event){
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    var names = [];
+    var points = [];
+    var ranks = [];
+    var game = $(this).attr('name');
+    var playerCount = $(this).find('.playerName').length;
+    for(var i = 0; i<playerCount; i++){
+      names.push($(this).find('#'+i)
+                        .find('.playerName')
+                        .text()
+                        .trim()
+                      );
+      points.push($(this).find('#'+i)
+                         .find('.updateScore')
+                         .val()
+                         .trim()
+                       );
+      ranks.push($(this).find('#'+i)
+                        .find('.updateRang option:selected')
+                        .text()
+                        .trim()
+                );
+    }
+    var data={
+      names: names,
+      points: points,
+      ranks: ranks,
+      game: game
+    };
+    $.ajax({
+      url:'pushUpdate',
+      type:'POST',
+      data: data,
+      success: function(){
+        $('.injectedPage').remove();
+        $('.content').append('<p class="injectedPage">Update Erfolgreich.</p>');
+      }
+    });
+    console.log(data);
+  })
 });

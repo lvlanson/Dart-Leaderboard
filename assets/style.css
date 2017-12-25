@@ -65,12 +65,21 @@ option{
 .updateSelection{
   display: inline-block;
 }
-.update, .updateForm{
+.updateRang, .updateForm{
   width: 100%;
   height: 100%;
   background-color: #e8e8e8;
   font-size: 20px;
 }
-.update{
+.updateRang{
   text-align-last: center;
+}
+.updateTable{
+  width: 60%;
+}
+.deniedImage{
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
 }

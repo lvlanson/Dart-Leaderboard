@@ -8,19 +8,21 @@
       <th>Cricket-Score</th>
       <th>501-Score</th>
     </tr>
-    <% for(var i=0; i<data.length; i++){%>
+    <% for(var i=0; i<data.length; i++){
+      if(!data[i].hasNotPlayed){%>
       <tr id="player<%=i%>">
         <td><%= data[i].player %></td>
-        <td><%= data[i].gamesTotal %></td>
+        <td><%= data[i].winsTotal %></td>
         <td><%= data[i].lossesTotal %></td>
             <% if(data[i].gamesTotal === 0){%>
-            <td><%= 0 + '%' %></td>
+            <td><%= 'n.A.' %></td>
             <% }else{ %>
-            <td><%= data[i].winsTotal / data[i].gamesTotal * 100 + '%' %></td>
+            <td><%= data[i].winrateTotal + '%' %></td>
             <% } %>
-        <td><%= data[i].cricketScore %></td>
-        <td><%= data[i].five01Score %></td>
+        <td><%= data[i].cricketScoreRel %></td>
+        <td><%= data[i].five01ScoreRel %></td>
       </tr>
-    <%}%>
+    <%}
+      }%>
   </table>
 </div>

@@ -4,15 +4,23 @@
       <th>Spieler</th>
       <th>Wins</th>
       <th>Losses</th>
-      <th>Punkte</th>
+      <th>Winrate</th>
+      <th>Punkte Summe</th>
+      <th>Punkte DurchSchnitt</th>
+      <th>Rang Durchschnitt</th>
     </tr>
-    <% for(var i=0; i<data.length; i++){%>
+    <% for(var i=0; i<data.length; i++){
+      if(!data[i].hasNotPlayed){%>
       <tr id="player<%=i%>">
         <td><%=data[i].player%></td>
         <td><%=data[i].five01Wins%></td>
         <td><%=data[i].five01Losses%></td>
-        <td><%=data[i].five01Score%></td>
+        <td><%=data[i].five01Winrate%></td>
+        <td><%=data[i].five01ScoreSum%></td>
+        <td><%=data[i].five01ScoreRel%></td>
+        <td><%=data[i].five01Rank%></td>
       </tr>
-    <%}%>
+    <%}
+      }%>
   </table>
 </div>

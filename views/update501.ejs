@@ -1,31 +1,31 @@
 <div class="injectedPage">
   <div class="updateGamePage">
     <p>501</p>
-    <form action="sendUpdate" id="sendUpdate">
-      <table>
+    <form action="sendUpdate" id="sendUpdate" name='501'>
+      <table class='updateTable'>
         <tr>
           <th>Spieler</th>
           <th>Score</th>
           <th>Rang</th>
         </tr>
         <%for(var i=0; i<names.length;i++){%>
-          <tr>
-            <td>
+          <tr id='<%=i%>'>
+            <td class='playerName'>
               <%=names[i]%>
             </td>
             <td>
-              <input id="updateScore" name="updateScore" class="updateForm">
+              <input name="updateScore" class="updateScore">
             </td>
             <td>
-              <select id="updateRang" name="updateRang" class='update'>
-              <%for(var j=0; j<names.length; j++){
-                if(i===j){%>
+              <select name="updateRang" class='updateRang'>
+              <%for(var j=1; j<names.length + 1; j++){
+                if(j-1===i){%>
                 <option name="<%=j%>" id="rang<%=j%>" selected>
-                  <%=j+1%>
+                  <%=j%>
                 </option>
                 <%}else{%>
                   <option name="<%=j%>" id="rang<%=j%>">
-                    <%=j+1%>
+                    <%=j%>
                   </option>
                 <%}
               }%>
@@ -34,6 +34,7 @@
           </tr>
         <%}%>
       </table>
+      <button type="submit">Send</button>
     </form>
   </div>
 </div>

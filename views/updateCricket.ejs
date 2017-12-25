@@ -1,5 +1,44 @@
-<div class="injectedPage">
-  <div class="updateGamePage">
+<div class='injectedPage'>
+  <div class='updateGamePage'>
     <p>Cricket</p>
+    <form action='sendUpdate' id='sendUpdate' name='cricket'>
+      <table class='updateTable'>
+        <tr>
+          <th>Spieler</th>
+          <th>Score</th>
+          <th>Rang</th>
+        </tr>
+        <%for(var k=0;k<names.length;k++){ %>
+          <tr id='<%=k%>'>
+
+            <td class='playerName'>
+              <%= names[k]%>
+            </td>
+
+            <td>
+              <input name='updateCricket' class='updateScore'>
+            </td>
+
+            <td>
+              <select class='updateRang'>
+                <% for(var l=1; l<names.length + 1; l++){
+                  if(l-1 === k){%>
+                  <option name='<%=l%>' id='rang<%=l%>' selected>
+                    <%= l %>
+                  </option>
+                  <%}else{%>
+                  <option name='<%=l%>' id='rang<%=l%>'>
+                    <%= l %>
+                  </option>
+                <% }
+                  } %>
+              </select>
+            </td>
+
+          </tr>
+        <% } %>
+      </table>
+      <button type="submit">Send</button>
+    </form>
   </div>
 </div>

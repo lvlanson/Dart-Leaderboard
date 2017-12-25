@@ -122,7 +122,7 @@ app.use('/public', express.static('public'));
 
 app.use(favicon(__dirname + '/public/images/favicon/favicon.ico'));
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 
 function isPageName(name){
   if (name === 'konfiguration' || name === 'cricket' || name === '501' || name === 'update' || name === 'spieler'){

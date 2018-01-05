@@ -12,15 +12,15 @@
       if(!data[i].hasNotPlayed){%>
       <tr id="player<%=i%>">
         <td><%= data[i].player %></td>
-        <td><%= data[i].winsTotal %></td>
-        <td><%= data[i].lossesTotal %></td>
-            <% if(data[i].gamesTotal === 0){%>
+        <td><%= data[i].total.wins %></td>
+        <td><%= data[i].total.losses %></td>
+            <% if(data[i].total.games === 0){%>
             <td><%= 'n.A.' %></td>
             <% }else{ %>
-            <td><%= data[i].winrateTotal + '%' %></td>
+            <td><%= data[i].total.winrate + '%' %></td>
             <% } %>
-        <td><%= data[i].cricketScoreRel %></td>
-        <td><%= data[i].five01ScoreRel %></td>
+        <td><%= data[i].cricket.scoreAverage %></td>
+        <td><%= data[i].five01.scoreAverage %></td>
       </tr>
     <%}
       }%>

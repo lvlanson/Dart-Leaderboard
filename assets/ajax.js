@@ -15,7 +15,9 @@ function getPage(addPage, removePage){
 $(document).ready(function(){
 
 
-  // Click Handling navigation
+  /*=====================================================
+                    NAVIGATION HANDLER
+  =====================================================*/
 
   $('nav').on('click', 'a', function(){
     var page = $(this).text().toLowerCase();
@@ -28,7 +30,6 @@ $(document).ready(function(){
         success: function(response){
           $('.injectedPage').remove();
           $('.content').append(response);
-
         }
       })
     }else{
@@ -37,6 +38,10 @@ $(document).ready(function(){
     }
 
   });
+
+/*==========================================================
+                  ADDING PLAYER HANDLER
+==========================================================*/
 
   $('.content').on('submit','.addPlayer', function(event){
     event.preventDefault();
@@ -55,15 +60,15 @@ $(document).ready(function(){
           var remove=$(".injectedPage");
           getPage('konfiguration', remove);
         },
-        error: function(){
-          console.log('Error');
+        error: function(data){
+          $('.addPlayer').append(data);
         }
       });
     }
   });
-  /*
-   * DELETE PLAYER FROM KONFIGURATION PAGE
-   */
+  /*=====================================================
+                DELETE PLAYER HANDLER
+   ====================================================*/
 
 
   $('.content').on('click', '.delete', function(){
@@ -80,6 +85,10 @@ $(document).ready(function(){
       }
     });
   });
+
+  /*=====================================================
+                  UPDATE FORM HANDLER
+  =====================================================*/
 
   $('.content').on('change', '#updateForm', function(event){
     event.preventDefault();
@@ -125,6 +134,10 @@ $(document).ready(function(){
     }
   });
 
+  /*******************************************************
+                    UPDATE SUBMITTER
+  *******************************************************/
+
   $('.content').on('submit', '#sendUpdate', function(event){
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -166,5 +179,5 @@ $(document).ready(function(){
       }
     });
     console.log(data);
-  })
+  });
 });

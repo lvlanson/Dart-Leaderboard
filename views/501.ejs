@@ -13,12 +13,12 @@
       if(!data[i].hasNotPlayed){%>
       <tr id="player<%=i%>">
         <td><%=data[i].player%></td>
-        <td><%=data[i].five01Wins%></td>
-        <td><%=data[i].five01Losses%></td>
-        <td><%=data[i].five01Winrate%></td>
-        <td><%=data[i].five01ScoreSum%></td>
-        <td><%=data[i].five01ScoreRel%></td>
-        <td><%=data[i].five01Rank%></td>
+        <td><%=data[i].five01.wins%></td>
+        <td><%=data[i].five01.losses%></td>
+        <td><%=data[i].five01.winrate +'%'%></td>
+        <td><%=data[i].five01.score%></td>
+        <td><%=data[i].five01.scoreAverage%></td>
+        <td><%=data[i].five01.rank%></td>
       </tr>
     <%}
       }%>
